@@ -33,9 +33,9 @@ const LandingPage = () => {
           </div>
         </div>
 
-        <div className="relative pr-[5%]">
+        <div className="relative">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-white/30 rounded-full blur-3xl -z-10"></div>
-          <div className="space-y-6 flex flex-col items-end">
+          <div className="space-y-6 flex flex-col items-center md:items-end">
             <div className="w-full max-w-md">
               <UserMatchCard 
                 initials="AS"
@@ -49,7 +49,7 @@ const LandingPage = () => {
               />
             </div>
             
-            <div className="w-full max-w-md mr-12">
+            <div className="w-full max-w-md">
               <UserMatchCard 
                 initials="KM"
                 name="Kamran M."
@@ -132,25 +132,25 @@ const LandingPage = () => {
           From languages and tech to cooking and music — real people near you, ready to exchange.
         </p>
         
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 justify-items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {[
-            { name: 'Web Design', count: 48, color: 'bg-green-500' },
-            { name: 'English Speaking', count: 91, color: 'bg-blue-500' },
-            { name: 'Python / Coding', count: 37, color: 'bg-orange-500' },
-            { name: 'Graphic Design', count: 55, color: 'bg-pink-500' },
-            { name: 'Urdu to English', count: 29, color: 'bg-indigo-500' },
-            { name: 'Digital Marketing', count: 44, color: 'bg-red-500' },
-            { name: 'Photography', count: 22, color: 'bg-green-700' },
-            { name: 'Video Editing', count: 31, color: 'bg-teal-500' },
-            { name: 'IELTS Prep', count: 17, color: 'bg-blue-700' },
-            { name: 'Math / Tutoring', count: 26, color: 'bg-orange-700' },
-            { name: 'Logo Design', count: 18, color: 'bg-indigo-700' },
-            { name: 'Excel & Sheets', count: 33, color: 'bg-emerald-600' },
+            { name: 'Web Design', count: 48, color: 'bg-green-500', desc: 'Design stunning websites and landing pages.' },
+            { name: 'English Speaking', count: 91, color: 'bg-blue-500', desc: 'Improve your fluency and speaking confidence.' },
+            { name: 'Python / Coding', count: 37, color: 'bg-orange-500', desc: 'Learn programming and software development.' },
+            { name: 'Graphic Design', count: 55, color: 'bg-pink-500', desc: 'Create logos, posters, and visual brandings.' },
+            { name: 'Urdu to English', count: 29, color: 'bg-indigo-500', desc: 'Translate and master bilingual communication.' },
+            { name: 'Digital Marketing', count: 44, color: 'bg-red-500', desc: 'Master SEO, Ads, and social media growth.' },
+            { name: 'Photography', count: 22, color: 'bg-green-700', desc: 'Capture professional shots and edit photos.' },
+            { name: 'Video Editing', count: 31, color: 'bg-teal-500', desc: 'Edit cinematic videos and YouTube content.' },
           ].map(skill => (
-            <div key={skill.name} className="flex items-center gap-3 group cursor-pointer">
-              <div className={`w-2 h-2 rounded-full ${skill.color}`}></div>
-              <span className="font-bold text-gray-900 group-hover:text-skill-green transition-colors">{skill.name}</span>
-              <span className="text-gray-400 text-xs font-bold">{skill.count}</span>
+            <div key={skill.name} className="bg-white p-6 rounded-2xl border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all text-left">
+              <div className="flex items-center justify-between mb-4">
+                <div className={`w-3 h-3 rounded-full ${skill.color}`}></div>
+                <span className="text-xs font-bold text-skill-green bg-skill-green/10 px-2 py-1 rounded-md">{skill.count} active</span>
+              </div>
+              <h3 className="text-lg font-bold text-gray-900 mb-2 tracking-tight">{skill.name}</h3>
+              <p className="text-xs text-gray-500 leading-relaxed mb-4">{skill.desc}</p>
+              <button className="text-xs font-bold text-primary hover:underline">Browse experts →</button>
             </div>
           ))}
         </div>
