@@ -1,0 +1,26 @@
+{
+  "name": "local-skill-barter-platform",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "client": "npm run dev --prefix client",
+    "server": "npm run dev --prefix server",
+    "dev": "concurrently \"npm run client\" \"npm run server\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bariraazaib/Local-Skill-Barter-Platform.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/bariraazaib/Local-Skill-Barter-Platform/issues"
+  },
+  "homepage": "https://github.com/bariraazaib/Local-Skill-Barter-Platform#readme",
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}

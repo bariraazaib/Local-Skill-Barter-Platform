@@ -4,12 +4,12 @@ import UserMatchCard from '../components/UserMatchCard';
 
 const LandingPage = () => {
   return (
-    <div className="min-h-screen pt-16">
+    <div className="min-h-screen pt-16 px-[5%]">
       <Navbar />
       
       {/* Hero Section */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-24 grid md:grid-cols-2 gap-12 items-center">
-        <div>
+      <section className="max-w-7xl mx-auto py-12 pb-24 grid md:grid-cols-2 gap-12 items-center">
+        <div className="pl-[5%]">
           <div className="inline-flex items-center gap-2 bg-skill-green/10 text-skill-green px-4 py-1.5 rounded-full text-sm font-bold mb-8">
             <div className="w-2 h-2 rounded-full bg-skill-green animate-pulse"></div>
             No money. Just skills.
@@ -33,21 +33,23 @@ const LandingPage = () => {
           </div>
         </div>
 
-        <div className="relative">
+        <div className="relative pr-[5%]">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-white/30 rounded-full blur-3xl -z-10"></div>
-          <div className="space-y-6">
-            <UserMatchCard 
-              initials="AS"
-              name="Ayesha S."
-              location="Rawalpindi, I-8"
-              offers={['Web Design', 'Figma']}
-              wants={['English', 'IELTS']}
-              match={92}
-              trust="98"
-              color="bg-footer-from text-gray-700"
-            />
+          <div className="space-y-6 flex flex-col items-end">
+            <div className="w-full max-w-md">
+              <UserMatchCard 
+                initials="AS"
+                name="Ayesha S."
+                location="Rawalpindi, I-8"
+                offers={['Web Design', 'Figma']}
+                wants={['English', 'IELTS']}
+                match={92}
+                trust="98"
+                color="bg-footer-from text-gray-700"
+              />
+            </div>
             
-            <div className="ml-12">
+            <div className="w-full max-w-md mr-12">
               <UserMatchCard 
                 initials="KM"
                 name="Kamran M."
@@ -77,8 +79,8 @@ const LandingPage = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 border-t border-gray-100">
-        <div className="flex flex-wrap justify-start gap-16">
+      <section className="max-w-7xl mx-auto py-10 border-t border-gray-100">
+        <div className="flex flex-wrap justify-center gap-16 text-center">
           <div>
             <h2 className="text-4xl font-bold text-gray-900 mb-1 tracking-tight">2,400+</h2>
             <p className="text-sm text-gray-500 font-medium">Active traders</p>
@@ -95,11 +97,11 @@ const LandingPage = () => {
       </section>
 
       {/* Process Section */}
-      <section className="py-24 bg-white/50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-24 bg-white/50 text-center">
+        <div className="max-w-7xl mx-auto">
           <p className="text-skill-green font-bold text-sm tracking-widest uppercase mb-4">The Process</p>
           <h2 className="text-5xl font-bold text-gray-900 mb-6 tracking-tight">How SkillBarter works</h2>
-          <p className="text-xl text-gray-600 mb-16 max-w-2xl leading-relaxed">
+          <p className="text-xl text-gray-600 mb-16 max-w-2xl mx-auto leading-relaxed">
             Four simple steps from signing up to your first skill exchange — all in your local area.
           </p>
 
@@ -123,14 +125,14 @@ const LandingPage = () => {
       </section>
 
       {/* Skills Showcase */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+      <section className="max-w-7xl mx-auto py-24 text-center">
         <p className="text-skill-green font-bold text-sm tracking-widest uppercase mb-4">Skills in your city</p>
         <h2 className="text-5xl font-bold text-gray-900 mb-6 tracking-tight">180+ skills being traded right now</h2>
-        <p className="text-xl text-gray-600 mb-16 leading-relaxed">
+        <p className="text-xl text-gray-600 mb-16 mx-auto max-w-2xl leading-relaxed">
           From languages and tech to cooking and music — real people near you, ready to exchange.
         </p>
         
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 justify-items-center">
           {[
             { name: 'Web Design', count: 48, color: 'bg-green-500' },
             { name: 'English Speaking', count: 91, color: 'bg-blue-500' },
@@ -155,14 +157,14 @@ const LandingPage = () => {
       </section>
 
       {/* Trust & Safety Section */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 border-t border-gray-100">
+      <section className="max-w-7xl mx-auto py-24 border-t border-gray-100 text-center">
         <p className="text-skill-green font-bold text-sm tracking-widest uppercase mb-4">Trust & Safety</p>
         <h2 className="text-5xl font-bold text-gray-900 mb-6 tracking-tight">Built on accountability</h2>
-        <p className="text-xl text-gray-600 mb-16 leading-relaxed">
+        <p className="text-xl text-gray-600 mb-16 mx-auto max-w-2xl leading-relaxed">
           A transparent reputation system keeps the community honest and fair.
         </p>
 
-        <div className="grid md:grid-cols-3 gap-12">
+        <div className="grid md:grid-cols-3 gap-12 text-left">
           {[
             { 
               icon: '⭐', 
